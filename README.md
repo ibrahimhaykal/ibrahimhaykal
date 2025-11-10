@@ -103,9 +103,8 @@ I'm passionate about web and Android development, currently studying Information
 
 </div>
 </details>
-[![GitHub Streak](https://streak-stats.demolab.com?user=ibrahimhaykal&theme=dark)](https://git.io/streak-stats)
-<h2 align="center">📊 GitHub Statistics</h2>
 
+<h2 align="center">📊 GitHub Statistics</h2>
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&theme=tokyonight&layout=compact" />
 </p>

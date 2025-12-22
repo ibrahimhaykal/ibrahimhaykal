@@ -18,13 +18,6 @@
 
 I'm passionate about web and Android development, currently studying Information Systems at **Politeknik STMI Jakarta**. I enjoy building efficient, user-friendly applications and continuously exploring new technologies.
 
-<h2 align="center">💼 Professional Experience</h2>
-
-<h3 align="center">🏢 Intern Developer at Nirmala Technology</h3>
-
-- 🛠️ Developing projects with Laravel and Tailwind CSS
-- 🎨 Designing UI/UX using Figma
-
 ---
 
 <h2 align="center">🎯 Notable Projects</h2>

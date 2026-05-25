@@ -1,62 +1,33 @@
-<h1 align="center">Hi, I'm Ibrahim Haykal Alatas 👋</h1>
+# Hi, I'm Ibrahim Haykal Alatas 👋
 
-<h3 align="center">Developer • Information Systems Student • Web & Android Enthusiast</h3>
+**Full-Stack Developer | Information Systems Student at Politeknik STMI Jakarta**
 
-<p align="center">
-  <a href="https://instagram.com/ibrahim_haykal">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white" />
-  </a>
-  <a href="https://linkedin.com/in/ibrahimhaykalalatas">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" />
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=ibrahimhaykal&color=5865F2" />
+I specialize in building custom internal tools, digitalizing manufacturing operations, and optimizing heavy-duty workflows. I enjoy bridging the gap between legacy systems and modern web applications. Currently working as a **System Engineer Intern at PT Gemala Kempa Daya (Astra Otoparts Group)**.
+
+<p align="left">
+  <a href="https://linkedin.com/in/ibrahimhaykalalatas" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://instagram.com/ibrahim_haykal" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
 </p>
 
 ---
 
-## About Me
+### 🚀 Experience & Featured Projects
 
-I'm an Information Systems student at **Politeknik STMI Jakarta** with an interest in web development, Android development, and AI-based applications.
+*   **Real-Time Raw Material Warehouse System:** Engineered a real-time inventory control system utilizing FIFO logic and dynamic rack mapping to manage 48 blocks and 300+ material types.
+*   **Smart Andon Ticketing System:** Architected a stateful operational workflow system implementing OTP/QR validations and measuring Mean Time To Repair (MTTR).
+*   **Database Migration (Trucking Control System):** Executed a zero-downtime database transition from Oracle to PostgreSQL utilizing an application-level dual-write strategy.
+*   **EduBot & Fender Apron Detection:** Built AI-driven educational chatbots and computer vision detection systems utilizing Python and Streamlit.
+*   **Academic & Management Systems:** Developed various web-based applications including Scholarship Registration, Cargo Management, and Employee Attendance programs.
 
-I enjoy building useful, simple, and user-friendly systems while continuously learning new technologies.
+### 💻 Tech Stack
 
----
-
-## Projects
-
-- **EduBot** — AI chatbot for learning using Python & Streamlit  
-- **Fender Apron Detection System** — image detection app using Python & Streamlit  
-- **Employee Attendance Program** — attendance system built with C  
-- **Scholarship Registration System** — web-based registration system using PHP  
-- **Cargo Management System** — cargo data management system using PHP  
-- **Bus Rental Application** — web-based rental system using PHP  
-
----
-
-## Tech Stack
-
-**Languages**  
-`C` `C#` `Java` `JavaScript` `PHP` `Python` `HTML` `CSS` `Kotlin`
-
-**Frameworks & Libraries**  
-`Laravel` `Next.js` `Tailwind CSS` `Bootstrap` `DaisyUI` `Chart.js`
-
-**Data & AI**  
-`TensorFlow` `Keras` `Pandas` `NumPy` `Scikit-learn` `Streamlit`
-
-**Tools**  
-`Git` `GitHub` `Figma` `Canva`
-
----
-
-## GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&theme=tokyonight&layout=compact" />
-</p>
+*   **Languages:** PHP, TypeScript/JavaScript, Python, Kotlin, Java, C#, C
+*   **Frameworks:** Laravel, Next.js, React, Node.js, TailwindCSS, Bootstrap
+*   **Databases & Tools:** PostgreSQL, MySQL, Oracle, Docker, Git, Figma
+*   **Data Science:** TensorFlow, Keras, Pandas, NumPy, Scikit-learn
 
 ---
 
 <p align="center">
-  <i>"Code can change the world. Let's make it happen."</i>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&theme=transparent&hide_title=true&layout=compact" alt="Top Languages" />
 </p>

@@ -1,47 +1,85 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello+There!+👋;I'm+Ibrahim+Haykal+Alatas;&center=true&size=35&width=500&height=70&duration=4000&pause=1000" alt="Typing Animation">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=28&duration=3500&pause=1000&color=5865F2&center=true&vCenter=true&width=600&lines=Ibrahim+Haykal+Alatas;Backend+%26+Operational+Systems;Systems+that+run+the+factory+floor" alt="Typing SVG">
 </h1>
 
-<h3 align="center">Full-Stack Developer | Information Systems Student</h3>
-
 <p align="center">
-  <a href="https://linkedin.com/in/ibrahimhaykalalatas" target="_blank">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="https://instagram.com/ibrahim_haykal" target="_blank">
-    <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram">
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=ibrahimhaykal&color=5865F2&style=flat-square" alt="Profile Views">
+  <a href="https://ibrahimhaykal.my.id"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white"></a>
+  <a href="https://linkedin.com/in/ibrahimhaykalalatas"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <img src="https://komarev.com/ghpvc/?username=ibrahimhaykal&color=5865F2&style=flat-square&label=views">
 </p>
 
----
+<br>
 
-## 🚀 About Me
+<img align="right" width="360" src="https://raw.githubusercontent.com/gist/vinicius-fernandes-dev/1d6c4f3f2b1e6e4b3c2a5f8e9d0c1b2a/raw/coder.gif" alt="coding">
 
-I specialize in building custom internal tools, digitalizing manufacturing operations, and optimizing heavy-duty workflows. I enjoy bridging the gap between legacy systems and modern web applications to create efficient, real-world solutions. 
+```
+Software Engineer @ Data Polis
+Previously: System Engineer
+@ PT Gemala Kempa Daya (Astra Otoparts Group)
+```
 
-Currently, I am studying Information Systems at **Politeknik STMI Jakarta** and working as a **System Engineer Intern at PT Gemala Kempa Daya (Astra Otoparts Group)**.
+I build internal systems for real manufacturing
+operations — Production, PPIC, Maintenance,
+and Accounting.
 
-## 💼 Experience & Featured Projects
+Most of my work lives on top of legacy ERP
+(Infor/Baan), where the interesting problems
+aren't features, they're constraints:
+transactional consistency, live workflows that
+can't be paused, and data that has to stay
+correct across two databases at once.
 
-*   **Real-Time Raw Material Warehouse System:** Engineered a real-time inventory control system utilizing FIFO logic and dynamic rack mapping to manage 48 blocks and 300+ material types.
-*   **Smart Andon Ticketing System:** Architected a stateful operational workflow system implementing OTP/QR validations and measuring Mean Time To Repair (MTTR).
-*   **Database Migration (Trucking Control System):** Executed a zero-downtime database transition from Oracle to PostgreSQL utilizing an application-level dual-write strategy.
-*   **EduBot & Fender Apron Detection:** Built AI-driven educational chatbots and computer vision detection systems utilizing Python and Streamlit.
-*   **Academic & Management Systems:** Developed various web-based applications including Scholarship Registration, Cargo Management, and Employee Attendance programs.
+<br clear="both">
 
-## 💻 Tech Stack
+<br>
 
-*   **Languages:** PHP, TypeScript/JavaScript, Python, Kotlin, Java, C#, C
-*   **Frameworks & Libraries:** Laravel, Next.js, React, Node.js, TailwindCSS, Bootstrap
-*   **Databases & Tools:** PostgreSQL, MySQL, Oracle, Docker, Git, Figma
-*   **Data Science:** TensorFlow, Keras, Pandas, NumPy, Scikit-learn
+### Selected Work
 
----
+**FIFO Warehouse Monitoring** · *PT Gemala Kempa Daya*
+QR gate in/out across 48 material blocks, 400+ weekly transactions, digital
+location visualization integrated into the plant's existing portal.
+→ Material search time down **76%** (103 → 24.6 min), measured by time study
+across 5 operators × 30 cycles against the plant's internal QCC baseline.
 
-<h2 align="center">📊 GitHub Statistics</h2>
+**Oracle → PostgreSQL Migration** · *Trucking Control System*
+Phased migration using an application-level dual-write strategy. Both databases
+stayed consistent throughout. Zero downtime during live production.
+
+**Inventory Aging & Reconciliation** · *Accounting*
+30K+ row multi-sheet Excel exports in ~9 seconds, with drill-down tracing from
+warehouse summary to individual transactions.
+
+**Smart Andon** · *Maintenance*
+QR-validated issue lifecycle tracking with technician activity monitoring and
+MTTR visibility.
+
+<br>
+
+### Stack
+
+```
+Backend      Laravel · PHP · Node.js
+Database     PostgreSQL · Oracle PL/SQL · MySQL
+Frontend     React · Next.js · TypeScript · TailwindCSS
+Ops          Docker · Git
+```
+
+<br>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ibrahimhaykal&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;v=1" alt="GitHub Stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;v=1" alt="Top Languages" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=ibrahimhaykal&show_icons=true&theme=tokyonight&hide_border=true&hide_title=true" height="150">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&layout=compact&theme=tokyonight&hide_border=true&hide_title=true" height="150">
+</p>
+
+<br>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake.svg" alt="contribution snake">
+</p>
+
+<br>
+
+<p align="center">
+  <sub>I care about turning operational problems into reliable system design —<br>
+  and about checking whether the system actually improved anything.</sub>
 </p>

@@ -11,7 +11,7 @@
 <br>
 
 ```
-Full Stack Developer @ PT Data Teknologi Terintegrasi (Data Polis)
+Software Engineer @ PT Data Teknologi Terintegrasi (Data Polis)
 Previously: Full Stack Developer / System Engineer Intern
             @ PT Gemala Kempa Daya (Astra Otoparts Group)
 ```

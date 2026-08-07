@@ -1,4 +1,3 @@
-
 // Aggregates language bytes across public, non-fork repositories and renders
 // a light and dark SVG card into dist/.
 // Runs on the default GITHUB_TOKEN — no personal access token required.
@@ -98,10 +97,14 @@ function render(entries, dark) {
   const track = dark ? "#21262D" : "#EAEEF2";
 
   const width = 500;
-  const barY = 12;
+  const column = width / 2;
+  const barY = 10;
   const barHeight = 10;
   const rows = Math.ceil(entries.length / 2);
-  const height = barY + barHeight + 22 + rows * 22;
+  const legendTop = barY + barHeight + 26;
+  const height = legendTop + rows * 22;
+
+  const color = (language, index) => COLORS[language] ?? FALLBACK[index % FALLBACK.length];
 
   let cursor = 0;
   const segments = entries
@@ -109,32 +112,30 @@ function render(entries, dark) {
       const span = (bytes / total) * width;
       const x = cursor;
       cursor += span;
-      const color = COLORS[language] ?? FALLBACK[index % FALLBACK.length];
-      return `<rect x="${x.toFixed(2)}" y="${barY}" width="${span.toFixed(2)}" height="${barHeight}" fill="${color}"/>`;
+      return `<rect x="${x.toFixed(2)}" y="${barY}" width="${span.toFixed(2)}" height="${barHeight}" fill="${color(language, index)}"/>`;
     })
     .join("");
 
   const legend = entries
     .map(([language, bytes], index) => {
-      const color = COLORS[language] ?? FALLBACK[index % FALLBACK.length];
       const share = ((bytes / total) * 100).toFixed(1);
-      const column = index % 2;
-      const row = Math.floor(index / 2);
-      const x = column * (width / 2);
-      const y = barY + barHeight + 32 + row * 22;
+      const x = (index % 2) * column;
+      const y = legendTop + Math.floor(index / 2) * 22;
       return [
-        `<circle cx="${x + 6}" cy="${y - 4}" r="5" fill="${color}"/>`,
+        `<circle cx="${x + 6}" cy="${y - 4}" r="5" fill="${color(language, index)}"/>`,
         `<text x="${x + 18}" y="${y}" fill="${ink}" font-size="13">${escapeXml(language)}</text>`,
-        `<text x="${x + 18 + language.length * 7.5 + 8}" y="${y}" fill="${muted}" font-size="13">${share}%</text>`,
+        `<text x="${x + column - 12}" y="${y}" fill="${muted}" font-size="13" text-anchor="end">${share}%</text>`,
       ].join("");
     })
     .join("");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+<defs><clipPath id="rounded"><rect x="0" y="${barY}" width="${width}" height="${barHeight}" rx="5"/></clipPath></defs>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
 <rect x="0" y="${barY}" width="${width}" height="${barHeight}" rx="5" fill="${track}"/>
-<g clip-path="url(#round)">${segments}</g>
-<defs><clipPath id="round"><rect x="0" y="${barY}" width="${width}" height="${barHeight}" rx="5"/></clipPath></defs>
+<g clip-path="url(#rounded)">${segments}</g>
 ${legend}
+</g>
 </svg>
 `;
 }
@@ -148,5 +149,5 @@ for (const [language, bytes] of entries) {
 }
 
 await mkdir("dist", { recursive: true });
-await writeFile("dist/languages.svg", render(entries, false));
-await writeFile("dist/languages-dark.svg", render(entries, true));
+await writeFile("dist/langcard.svg", render(entries, false));
+await writeFile("dist/langcard-dark.svg", render(entries, true));

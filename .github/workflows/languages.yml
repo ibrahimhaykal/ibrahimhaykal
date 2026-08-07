@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Show repository contents
+        run: ls -R scripts .github/workflows
       - name: Generate language card
         run: node scripts/langs.mjs
         env:

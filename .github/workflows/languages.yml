@@ -1,5 +1,13 @@
 name: Language card
 
+# Setup:
+# 1. Create a scope-less personal access token (no checkboxes needed —
+#    this only reads public repository data).
+# 2. Save it as a repository secret named METRICS_TOKEN.
+# 3. Create the `output` branch if it does not exist yet:
+#      git switch --orphan output && git commit --allow-empty -m init && git push -u origin output
+# 4. Run this workflow manually once from the Actions tab.
+
 on:
   schedule:
     - cron: "0 21 * * 0"

@@ -1,67 +1,33 @@
-name: Language card
-
-# Setup:
-# 1. Create a scope-less personal access token (no checkboxes needed —
-#    this only reads public repository data).
-# 2. Save it as a repository secret named METRICS_TOKEN.
-# 3. Create the `output` branch if it does not exist yet:
-#      git switch --orphan output && git commit --allow-empty -m init && git push -u origin output
-# 4. Run this workflow manually once from the Actions tab.
-
+name: Generate Language Card
 on:
   schedule:
-    - cron: "0 21 * * 0"
+    - cron: "0 19 * * 0"
   workflow_dispatch:
   push:
     branches:
       - main
-
-permissions:
-  contents: write
-
 jobs:
-  languages:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Light card
-        uses: lowlighter/metrics@latest
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ibrahimhaykal
-          filename: languages.svg
-          committer_branch: output
-          committer_message: "chore: regenerate language card"
-          base: ""
-          config_timezone: Asia/Jakarta
-          config_display: large
-          plugin_languages: yes
-          plugin_languages_sections: most-used
-          plugin_languages_details: percentage
-          plugin_languages_limit: 8
-          plugin_languages_threshold: 1%
-          plugin_languages_ignored: html, css, scss, blade, hack, dockerfile
-
-      - name: Dark card
-        uses: lowlighter/metrics@latest
+          node-version: 20
+      - name: Generate language card
+        run: node scripts/langs.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ibrahimhaykal
-          filename: languages-dark.svg
-          committer_branch: output
-          committer_message: "chore: regenerate language card (dark)"
-          base: ""
-          config_timezone: Asia/Jakarta
-          config_display: large
-          plugin_languages: yes
-          plugin_languages_sections: most-used
-          plugin_languages_details: percentage
-          plugin_languages_limit: 8
-          plugin_languages_threshold: 1%
-          plugin_languages_ignored: html, css, scss, blade, hack, dockerfile
-          extras_css: |
-            :root {
-              --color-text: #c9d1d9;
-              --color-calendar-graph-day-bg: #161b22;
-            }
-            .background { fill: transparent; }
-            h2, .title { color: #c9d1d9; }
+          target_branch: output
+          build_dir: dist
+          keep_history: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

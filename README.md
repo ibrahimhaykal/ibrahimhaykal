@@ -30,10 +30,10 @@ below are what I can describe without exposing company data. Where a system is
 still being built, it says so.
 
 **Enterprise CRM** · *Actuarial Consulting Firm* · `in development`  
-Laravel and React 19 + TypeScript. Full stack across both repos, roughly 230
-commits over seven weeks. Six internal roles plus client-facing views, a
-19-stage kanban board with realtime sync over Pusher, and an actuarial report
-pipeline (PSAK 219) with per-version draft review.  
+Laravel and React 19 + TypeScript. Full stack across both repos: 195+ frontend
+and 38 backend commits over nine weeks. Six internal roles plus client-facing
+views, a 19-stage kanban board with realtime sync over Pusher, and an actuarial
+report pipeline (PSAK 219) with per-version draft review.  
 → Drag and drop is fully optimistic with rollback. An in-flight move counter
 holds refetches while moves are still pending, so rapid reordering doesn't get
 overwritten by stale server state, then reconciles once on the last settle.  
@@ -71,9 +71,9 @@ This is a partial view of what I work with, not the whole of it.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&layout=compact&langs_count=8&card_width=420&hide=html,css,blade,scss,hack&theme=github_dark&hide_border=true&bg_color=00000000&title_color=5865F2&text_color=c9d1d9">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&layout=compact&langs_count=8&card_width=420&hide=html,css,blade,scss,hack&theme=default&hide_border=true&bg_color=00000000&title_color=5865F2">
-    <img alt="Top languages by repository" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ibrahimhaykal&layout=compact&langs_count=8&card_width=420&hide=html,css,blade,scss,hack&hide_border=true&bg_color=00000000">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/languages-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/languages.svg">
+    <img alt="Top languages by repository" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/languages.svg" width="500">
   </picture>
 </p>
 

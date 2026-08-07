@@ -71,9 +71,9 @@ This is a partial view of what I work with, not the whole of it.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/languages-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/languages.svg">
-    <img alt="Top languages by repository" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/languages.svg" width="500">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/langcard-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/langcard.svg">
+    <img alt="Top languages by repository" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/langcard.svg" width="500">
   </picture>
 </p>
 

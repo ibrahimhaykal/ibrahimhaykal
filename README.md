@@ -11,10 +11,9 @@
 <br>
 
 ```
-Software Engineer @ Data Polis
-Previously: Fullstack Web Developer Intern @ PT Gemala Kempa Daya
-(Astra Otoparts Group) — internal systems for Production, PPIC,
-Maintenance, and Accounting
+Full Stack Developer @ PT Data Teknologi Terintegrasi (Data Polis)
+Previously: Full Stack Developer / System Engineer Intern
+            @ PT Gemala Kempa Daya (Astra Otoparts Group)
 ```
 
 I build internal systems for real manufacturing operations: Production, PPIC,
@@ -52,6 +51,11 @@ location visualization integrated into the plant's existing portal.
 → Material search time down **76%** (103 → 24.6 min), measured by time study
 across 5 operators × 30 cycles against the plant's internal QCC baseline.
 
+**Finished Goods Warehouse Visualization** · *Giant Rack Plant 3* · `closed source`  
+Mapped 80+ rack columns across multi-layer, top, and side U-shape storage
+layouts, with customer filtering, barcode scanning, shipment status, and
+on-screen operator guidance.
+
 **Oracle → PostgreSQL Migration** · *Trucking Control System* · `closed source`  
 Phased migration using an application-level dual-write strategy. Both databases
 stayed consistent throughout. Zero downtime during live production.
@@ -63,6 +67,11 @@ warehouse summary to individual transactions.
 **Smart Andon** · *Maintenance* · `closed source`  
 QR-validated issue lifecycle tracking with technician activity monitoring and
 MTTR visibility.
+
+**Maintenance Cost Approval** · *Maintenance × Accounting* · `closed source`  
+Spare part usage, COA classification, and asset submission routed through
+multi-level approval, so cost ownership stays traceable across two departments
+that sign off separately.
 
 <br>
 

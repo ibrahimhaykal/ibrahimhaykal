@@ -12,7 +12,9 @@
 
 ```
 Software Engineer @ Data Polis
-Previously: System Engineer @ PT Gemala Kempa Daya (Astra Otoparts Group)
+Previously: Fullstack Web Developer Intern @ PT Gemala Kempa Daya
+(Astra Otoparts Group) — internal systems for Production, PPIC,
+Maintenance, and Accounting
 ```
 
 I build internal systems for real manufacturing operations: Production, PPIC,

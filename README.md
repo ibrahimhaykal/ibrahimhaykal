@@ -82,9 +82,9 @@ This is a partial view of what I work with, not the whole of it.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/langcard-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/langcard.svg">
-    <img alt="Top languages by repository" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/langcard.svg" width="500">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard-dark.svg?v=1">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard.svg?v=1">
+    <img alt="Top languages by repository" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard.svg?v=1" width="500">
   </picture>
 </p>
 
@@ -96,10 +96,20 @@ This is a partial view of what I work with, not the whole of it.
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard-dark.svg?v=1">
-  <img src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard.svg?v=1" width="500">
-</picture>
+### Contribution Activity
+
+<!--
+  CEK NAMA FILE DULU di https://github.com/ibrahimhaykal/ibrahimhaykal/tree/output
+  Nama di bawah ini tebakan default dari Platane/snk. Kalau di snake.yml kamu
+  outputnya beda (misal github-contribution-grid-snake.svg), ganti ketiganya.
+-->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/github-snake.svg">
+    <img alt="Contribution grid snake animation" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/github-snake.svg">
+  </picture>
+</p>
 
 <br>
 

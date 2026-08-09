@@ -8,6 +8,9 @@ const USER = process.env.GITHUB_USER;
 const TOKEN = process.env.GITHUB_TOKEN;
 const LIMIT = 8;
 
+if (!USER) throw new Error("GITHUB_USER is not set.");
+if (!TOKEN) throw new Error("GITHUB_TOKEN is not set.");
+
 // Markup, styling and config languages that would otherwise drown out the
 // languages actually being written.
 const IGNORED = new Set([
@@ -57,7 +60,8 @@ async function api(path) {
     },
   });
   if (!response.ok) {
-    throw new Error(`GitHub API ${response.status} on ${path}`);
+    const body = await response.text();
+    throw new Error(`GitHub API ${response.status} on ${path} — ${body.slice(0, 200)}`);
   }
   return response.json();
 }
@@ -148,6 +152,17 @@ for (const [language, bytes] of entries) {
   console.log(`  ${language}: ${bytes} bytes`);
 }
 
+const light = render(entries, false);
+const darkCard = render(entries, true);
+
+// Without this the build stays green while writing the string "null" into the
+// .svg files, which renders as a broken image in the README.
+if (!light || !darkCard) {
+  throw new Error("No language data found — nothing to render.");
+}
+
 await mkdir("dist", { recursive: true });
-await writeFile("dist/langcard.svg", render(entries, false));
-await writeFile("dist/langcard-dark.svg", render(entries, true));
+await writeFile("dist/langcard.svg", light);
+await writeFile("dist/langcard-dark.svg", darkCard);
+
+console.log("Wrote dist/langcard.svg and dist/langcard-dark.svg");

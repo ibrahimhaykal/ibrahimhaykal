@@ -1,4 +1,5 @@
 name: Generate Language Card
+
 on:
   schedule:
     - cron: "0 19 * * 0"
@@ -6,6 +7,12 @@ on:
   push:
     branches:
       - main
+
+# Prevents this workflow from racing against itself on rapid pushes.
+concurrency:
+  group: language-card
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,21 +21,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Show repository contents
-        run: ls -R scripts .github/workflows
+
       - name: Generate language card
         run: node scripts/langs.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
-      - name: Push to output branch
+
+      - name: Verify output
+        run: |
+          ls -la dist
+          head -c 200 dist/langcard.svg
+          echo
+          test -s dist/langcard.svg
+          grep -q "<svg" dist/langcard.svg
+
+      # Deploys to its own branch. Sharing "output" with snake.yml means each
+      # run wipes the other workflow's files, since this action replaces the
+      # branch contents rather than merging into them.
+      - name: Push to langcard branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
-          target_branch: output
+          target_branch: langcard
           build_dir: dist
           keep_history: true
         env:

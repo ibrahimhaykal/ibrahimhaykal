@@ -1,3 +1,4 @@
+[README(1).md](https://github.com/user-attachments/files/30876747/README.1.md)
 <h1 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=26&duration=3500&pause=1000&color=5865F2&center=true&vCenter=true&width=600&lines=Ibrahim+Haykal+Alatas;Backend+%26+Operational+Systems;Systems+that+run+the+factory+floor" alt="Ibrahim Haykal Alatas">
 </h1>
@@ -98,16 +99,11 @@ This is a partial view of what I work with, not the whole of it.
 
 ### Contribution Activity
 
-<!--
-  CEK NAMA FILE DULU di https://github.com/ibrahimhaykal/ibrahimhaykal/tree/output
-  Nama di bawah ini tebakan default dari Platane/snk. Kalau di snake.yml kamu
-  outputnya beda (misal github-contribution-grid-snake.svg), ganti ketiganya.
--->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/github-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/github-snake.svg">
-    <img alt="Contribution grid snake animation" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/github-snake.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake.svg">
+    <img alt="Contribution grid snake animation" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake.svg">
   </picture>
 </p>
 

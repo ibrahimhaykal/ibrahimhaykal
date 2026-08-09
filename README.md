@@ -97,9 +97,8 @@ This is a partial view of what I work with, not the whole of it.
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake.svg">
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard-dark.svg?v=1">
+  <img src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard.svg?v=1" width="500">
 </picture>
 
 <br>

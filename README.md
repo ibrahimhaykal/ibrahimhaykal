@@ -1,4 +1,3 @@
-[README(1).md](https://github.com/user-attachments/files/30876747/README.1.md)
 <h1 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=26&duration=3500&pause=1000&color=5865F2&center=true&vCenter=true&width=600&lines=Ibrahim+Haykal+Alatas;Backend+%26+Operational+Systems;Systems+that+run+the+factory+floor" alt="Ibrahim Haykal Alatas">
 </h1>

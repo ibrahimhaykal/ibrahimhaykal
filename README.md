@@ -1,114 +1,99 @@
-<h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=26&duration=3500&pause=1000&color=5865F2&center=true&vCenter=true&width=600&lines=Ibrahim+Haykal+Alatas;Backend+%26+Operational+Systems;Systems+that+run+the+factory+floor" alt="Ibrahim Haykal Alatas">
-</h1>
+<h1 align="center">Ibrahim Haykal Alatas</h1>
 
 <p align="center">
-  <a href="https://ibrahimhaykal.my.id"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
-  <a href="https://linkedin.com/in/ibrahimhaykalalatas"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="mailto:ibrahimhaykal@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  Full Stack Developer · Jakarta, Indonesia<br>
+  <sub>Systems that hold up on the factory floor, and in the back office.</sub>
 </p>
 
-<br>
+<p align="center">
+  <a href="https://ibrahimhaykal.my.id"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white"></a>
+  <a href="https://linkedin.com/in/ibrahimhaykalalatas"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:ibrahimhaykal@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-000000?style=flat-square&logo=gmail&logoColor=white"></a>
+</p>
 
 ```
-Software Engineer @ PT Data Teknologi Terintegrasi (Data Polis)
-Previously: Full Stack Developer / System Engineer Intern
-            @ PT Gemala Kempa Daya (Astra Otoparts Group)
+Full Stack Developer @ PT Data Teknologi Terintegrasi (Datapolis)
+Previously:  Full Stack Developer Intern
+             @ PT Gemala Kempa Daya (Astra Otoparts Group)
 ```
 
-I build internal systems for real manufacturing operations: Production, PPIC,
-Maintenance, and Accounting. Most of my work lives on top of legacy ERP
-(Infor/Baan), where the interesting problems aren't features, they're
-constraints. Transactional consistency, live workflows that can't be paused,
-and data that has to stay correct across two databases at once.
+I build internal systems for real operations: actuarial consulting today,
+manufacturing before that (Production, PPIC, Maintenance, Accounting). Most of
+that work sat on top of a read-only Infor/Baan ERP, where the interesting
+problems are constraints, not features: live workflows that can't pause, and
+data that has to stay correct across two databases at once.
 
-<br>
+**Stack:** Laravel · PHP · React · TypeScript · PostgreSQL · Oracle PL/SQL · MySQL
 
-### Selected Work
+---
 
-Internal systems, all closed source, so there is no repository to link. Details
-below are what I can describe without exposing company data. Where a system is
-still being built, it says so.
+### Selected work
 
-**Enterprise CRM** · *Actuarial Consulting Firm* · `in development`  
-Laravel and React 19 + TypeScript. Full stack across both repos: 195+ frontend
-and 38 backend commits over nine weeks. Six internal roles plus client-facing
-views, a 19-stage kanban board with realtime sync over Pusher, and an actuarial
-report pipeline (PSAK 219) with per-version draft review.  
-→ Drag and drop is fully optimistic with rollback. An in-flight move counter
-holds refetches while moves are still pending, so rapid reordering doesn't get
-overwritten by stale server state, then reconciles once on the last settle.  
-→ Excel config uploads are edited in place. Cells are overwritten by address in
-the original workbook rather than regenerated, so multi-sheet templates survive
-the round trip intact. Forms are header-driven, so they adapt to template
-variants instead of assuming a fixed column layout.  
-→ AI summaries are cached against a hash of their input data, so they
-regenerate when the underlying figures change rather than on a timer.
+All of it is internal and closed source, so there is no repository to link.
+What follows is what I can describe without exposing company or client data.
 
-**FIFO Warehouse Monitoring** · *PT Gemala Kempa Daya* · `closed source`  
-QR gate in/out across 48 material blocks, 400+ weekly transactions, digital
-location visualization integrated into the plant's existing portal.  
-→ Material search time down **76%** (103 → 24.6 min), measured by time study
-across 5 operators × 30 cycles against the plant's internal QCC baseline.
+**VALAK CRM** · *Actuarial consulting firm* · `in daily use`  
+Internal CRM that carries a PSAK 219 employee-benefit valuation from quotation
+to billing, across 7 roles. Main frontend developer (React 19, TypeScript),
+plus the Laravel endpoints those flows needed: 625 frontend and 116 backend
+commits in four months, in a repo shared by several engineers.
+- Built the digital PSAK 219 report module with multi-book projects and a
+  final report release that replaced a manual process.
+- Built the 18-stage project management board for 7 roles with realtime
+  updates, now the firm's main workflow.
+- Integrated the CRM with the valuation app through a backend relay: data
+  upload, calculation runs, and status tracking from one place.
+- Built the account and security module on both sides for an app holding
+  client payroll data: server-side hashed credentials, session cleanup on
+  rejected tokens, and per-account isolation on shared devices.
+- Cut a 1,664-row company directory from 17 chained requests to 1, and merged
+  filter-option queries from 930 ms to 205 ms.
 
-**Finished Goods Warehouse Visualization** · *Giant Rack Plant 3* · `closed source`  
-Mapped 80+ rack columns across multi-layer, top, and side U-shape storage
-layouts, with customer filtering, barcode scanning, shipment status, and
-on-screen operator guidance.
+**FIFO Warehouse Monitoring** · *PT Gemala Kempa Daya*  
+QR gate in/out across 48 material blocks and 400+ weekly transactions, with
+digital location visualization inside the plant's existing portal.
+- Material search time down **76.10%** (103.00 → 24.62 min), measured by time
+  study across 5 operators × 30 cycles against the plant's QCC baseline.
+- The subject of my [published thesis](http://repository.stmi.ac.id/id/eprint/2840/).
 
-**Oracle → PostgreSQL Migration** · *Trucking Control System* · `closed source`  
-Phased migration using an application-level dual-write strategy. Both databases
-stayed consistent throughout. Zero downtime during live production.
+**Oracle → PostgreSQL Migration** · *Trucking Control System*  
+Phased migration with an application-level dual-write strategy. Both databases
+stayed consistent throughout, with zero downtime during live production.
 
-**Inventory Aging & Reconciliation** · *Accounting* · `closed source`  
-30K+ row multi-sheet Excel exports in ~9 seconds, with drill-down tracing from
+**Finished Goods Visualization** · *Giant Rack Plant 3*  
+80+ rack columns mapped across multi-layer, top, and side U-shape layouts, with
+customer filtering, barcode scanning, and shipment status.
+
+**Inventory Aging & Reconciliation** · *Accounting*  
+30K+ row multi-sheet Excel exports in about 9 seconds, with drill-down from
 warehouse summary to individual transactions.
 
-**Smart Andon** · *Maintenance* · `closed source`  
-QR-validated issue lifecycle tracking with technician activity monitoring and
-MTTR visibility.
+**Smart Andon & Maintenance Cost Approval** · *Maintenance × Accounting*  
+QR-validated issue lifecycle with MTTR visibility, and spare-part costs routed
+through multi-level approval so ownership stays traceable across two
+departments that sign off separately.
 
-**Maintenance Cost Approval** · *Maintenance × Accounting* · `closed source`  
-Spare part usage, COA classification, and asset submission routed through
-multi-level approval, so cost ownership stays traceable across two departments
-that sign off separately.
+---
 
-<br>
+### Recognition
 
-### Public Repository Languages
+- 2nd Place, National Hackathon 2025 · SME Digital Platform
+- Certified Database Administrator · BNSP
+- Applied Bachelor of Computer Science · Politeknik STMI Jakarta · GPA 3.77
 
-Generated from the code in my public repositories, not a self-reported list.
-This is a partial view of what I work with, not the whole of it.
+---
+
+### Public repository languages
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard-dark.svg?v=1">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard.svg?v=1">
-    <img alt="Top languages by repository" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard.svg?v=1" width="500">
+    <img alt="Top languages by repository" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/langcard/langcard.svg?v=1" width="460">
   </picture>
 </p>
 
 <p align="center">
-  <sub>Public repositories only. Language share is measured by bytes of code,
-  so it reflects what I write most, not everything I've shipped. Production
-  work on legacy ERP is closed source and won't appear here.</sub>
-</p>
-
-<br>
-
-### Contribution Activity
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake.svg">
-    <img alt="Contribution grid snake animation" src="https://raw.githubusercontent.com/ibrahimhaykal/ibrahimhaykal/output/snake.svg">
-  </picture>
-</p>
-
-<br>
-
-<p align="center">
-  <sub>I care about turning operational problems into reliable system design,
-  and about checking whether the system actually improved anything.</sub>
+  <sub>Public repositories only, measured by bytes of code. Production work is
+  closed source and doesn't appear here.</sub>
 </p>
